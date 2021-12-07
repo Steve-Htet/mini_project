@@ -1,0 +1,95 @@
+@media only screen and (max-width: 992px){
+    .skillbar{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .third{
+        padding: 80px 90px;
+    }
+
+    .course{
+        flex-direction: column;
+    }
+
+    .course-item{
+        margin: 20px 0;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+    header{
+        justify-content: center;
+    }
+
+    .contact{
+        display: none;
+    }
+
+    .navi ul{
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, .9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+    }
+    .navi li{
+        padding: 10px 0;
+    }
+    .navi a{
+        font-size: 1.8rem;
+    }
+
+    .burger{
+        visibility: visible;
+        margin-top: 10px;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .skillbar{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .showNav{
+        top: 0 !important;
+    }
+
+}
+
+@media only screen and (max-width: 578px){
+
+    nav{
+        padding: 0 70px 0 30px;
+    }
+
+    .first p{
+        text-align: center;
+    }
+
+    .skillbar{
+        padding: 0;
+    }
+    .second{
+        padding: 90px 30px;
+    }
+    .welcome{
+        width: 100%;
+        margin: 0;
+    }
+
+    .third{
+        padding: 80px 30px;
+    }
+
+    .hire{
+        padding: 80px 30px;
+    }
+    
+
+}

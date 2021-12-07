@@ -1,0 +1,282 @@
+/* preloader */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.pre-loader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    
+}
+.loader{
+    display: flex;
+    list-style: none;
+     
+}
+.loader li{
+    width: 2px;
+    height: 20px;
+    background: black;
+    margin: 0 3px;
+    animation: loader 1s linear infinite;
+}
+@keyframes loader {
+    0%{
+        transform: scaleY(1);
+    }
+    25%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(1);
+    }
+    75%{
+        transform: scaleY(3);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+.loader li:nth-child(1){animation-delay: .3s;}
+.loader li:nth-child(2){animation-delay: .4s;}
+.loader li:nth-child(3){animation-delay: .5s;}
+.loader li:nth-child(4){animation-delay: .6s;}
+.loader li:nth-child(5){animation-delay: .7s;}
+/* preloader end */
+
+/* header start */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: rgba(0, 0, 0, .9);
+}
+header a{
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* header end */
+
+/* nav start */
+nav {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 90px;
+}
+.navi, .navi ul{
+    display: flex;
+    height: inherit;
+    align-items: center;
+    /* margin-left: 300px; */
+}
+.navi ul li{
+    margin: 0 10px;
+    list-style-type: none;
+}
+nav a,i,li {
+    color: white;
+}
+.burger{
+    visibility: hidden;
+}
+.sticky{
+    background-color: rgba( 0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+}
+/* nav end */
+/* section start */
+
+section.first{
+
+    background: linear-gradient(
+        to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)
+    ), url(../images/banner-2.jpeg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.pic img{
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+.first h1{
+    margin: 30px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.first p{
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+.first h1::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: chocolate;
+    margin-top: 30px;
+}
+.first span{
+    font-size: 2.5em;
+    color: coral;
+}
+
+/* first section end */
+/* second section start */
+.second{
+    padding: 90px;
+}
+
+.welcome{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.welcome h1{
+    margin-bottom: 40px;
+}
+.welcome p{
+    letter-spacing: 3px;
+    line-height: 25px;
+}
+
+.skillbar{
+    width: 100%;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.skill-item{
+    padding: 10px 20px;
+}
+.skill-item h4{
+    margin-bottom: 20px;
+}
+
+.skill-loader{
+    width: 100px;
+    height: 5px;
+    background: #ccc;
+    position: relative;
+    z-index: -1;
+}
+.skill-loader::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 90%;
+    height: inherit;
+    background: linear-gradient(to right, yellowgreen,green, chocolate);
+}
+.skill-item:nth-child(2) .skill-loader::after{
+    width: 40%;
+    background: yellowgreen;
+}
+    
+/* section section end */
+/* third section start */
+.third{
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(
+        to right, rgba(0,0,0,.5),rgba(0,0,0,.5)
+    ), url(../images/banner-3.jpeg) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 200px 90px;
+}
+
+.hire{
+    width: 80%;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.hire h2{
+    margin-bottom: 30px;
+
+}
+.hire p{
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+.course{
+    display: flex;
+}
+
+.course-item{
+    background: rgba(150, 150, 150, .3);
+    padding: 50px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.course-item:hover{
+    background: rgba(0, 0, 0, .7);
+}
+
+.course-item h3{
+    margin: 20px 0;
+}
+
+.course-item p{
+    line-height: 30px;
+}
+/* third section end */
+
+
+/* scroll-up */
+.scroll-up{
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.scroll-up-item{
+    display: none;
+}
+.scroll-up-item i{
+    color: coral;
+}
